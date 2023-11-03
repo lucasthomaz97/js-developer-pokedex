@@ -1,9 +1,15 @@
 
 const pokeApi = {}
 
+pokeApi.rawPokemons = []
+
 function convertPokeApiDetailToPokemon(pokeDetail) {
     const pokemon = new Pokemon()
-    pokemon.number = pokeDetail.id
+    const id = pokeDetail.id
+
+    pokeApi.rawPokemons.push(pokeDetail)
+
+    pokemon.number = id
     pokemon.name = pokeDetail.name
 
     const types = pokeDetail.types.map((typeSlot) => typeSlot.type.name)
