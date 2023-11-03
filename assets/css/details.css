@@ -1,17 +1,20 @@
 .details {
     display: flex;
     flex-direction: column;
-    position: absolute;
+    position: fixed;
     top: 0;
-    left: 0;
     height: 100%;
     width: 100%;
+    margin-inline-end: 0;
+    align-items: center;
+    left: -0.1rem;
 }
 
 .header {
     display: flex;
     flex-direction: row;
     height: 130px;
+    width: 100%;
     justify-content: space-between;
 }
 
@@ -24,7 +27,9 @@
 .header span {
     color: #000;
     opacity: .3;
-    text-align: right;
+    text-align: center;
+    width: 4rem;
+    height: 4rem;
 }
 
 .detailsNumber {
@@ -35,8 +40,8 @@
 
 .close {
     align-items: end;
-    justify-content: end;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    width: 2rem;
 }
 
 .info {
@@ -44,6 +49,8 @@
     display: flex;
     flex-direction: column;
     border-radius: 2rem;
+    margin-inline-end: 0;
+    width: -webkit-fill-available;
 }
 
 .generalInfo {
@@ -51,6 +58,7 @@
     display: flex;
     flex-direction: column;
     color: #fff;
+    margin-inline-end: 0;
 }
 
 .nameDetails {
@@ -99,52 +107,90 @@
 }
 
 .statsList {
+    align-self: center;
     align-items: center;
     display: flex;
     flex-direction: column;
     list-style: none;
     padding-inline-start: 0;
     padding: 0.2rem;
+    width: 90%;
+    margin-inline-end: 0;
 }
 
 .stat {
+    width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
     margin-bottom: 0.625rem;
 }
 
-.statNumber {
-    font-size: 1rem ;
-    justify-self: end;
-}
-
-.statName {
-    font-size: .75rem;
-    justify-self: start;
-}
-
 .backgroundBar {
-    width: 12rem;
+    width: 15rem;
     background-color: #f6f8fc ;
-    height: 0.3rem;
+    height: 0.525rem;
     margin-inline: 0.75rem;
     justify-self: end;
+    align-self: flex-start;
+    border-radius: .5rem;
 }
 
 .bar {
     width: var(--stat);
-    align-self: self-start;
-    height: 1rem;
-    justify-self: start;
+    align-self: flex-start;
+    height: .7rem;
+    justify-self: flex-start;
     filter: brightness(1.3);
-    border-radius: 0.5rem;
+    border-radius: 0.2rem;
     z-index: 1;
+}
+
+.statNumber {
+    font-size: 1rem ;
+    justify-self: flex-end;
+    justify-content: end;
+}
+
+.statName {
+    width: 6rem;
+    font-size: .75rem;
+    justify-self: flex-start;
 }
 
 @media screen and (max-width:345px){
     .backgroundBar{
-        width: 5rem;
+        width: 12rem;
+    }
+
+    .statName {
+        width: 3rem;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .backgroundBar{
+        width: 22rem;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .details {
+        left:auto;
+    }
+    
+}
+
+@media screen and (min-width: 992px) {
+    .statName{
+        font-size: 1.2rem;
+        width: 9rem;
+    }
+
+    .statNumber {
+        font-size: 1.2rem;
+    }
+
+    .backgroundBar {
+        width: 41rem;
     }
 }

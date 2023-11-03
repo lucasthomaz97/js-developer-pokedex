@@ -55,7 +55,7 @@ function loadDetailsScreen(index) {
                         <div class="backgroundBar">
                             <div class="bar ${primaryType}" style="--stat:${(hp/255)*100}%"></div>
                         </div>
-                        <span>${hp}</span}
+                        <span class="statNumber">${hp}</span}
                     </li>
                     <li class="stat">
                         <span class="statName">Attack</span>
@@ -69,28 +69,28 @@ function loadDetailsScreen(index) {
                         <div class="backgroundBar">
                             <div class="bar ${primaryType}" style="--stat:${(defense/255)*100}%"></div>
                         </div>
-                        <span "statNumber">${defense}</span}
+                        <span class="statNumber">${defense}</span}
                     </li>
                     <li class="stat">
                         <span class="statName">Special Attack</span>
                         <div class="backgroundBar">
                             <div class="bar ${primaryType}" style="--stat:${(specialAttack/255)*100}%"></div>
                         </div>
-                        <span "statNumber">${specialAttack}</span}
+                        <span class="statNumber">${specialAttack}</span}
                     </li>
                     <li class="stat">
                         <span class="statName">Special Defense</span>
                         <div class="backgroundBar">
                             <div class="bar ${primaryType}" style="--stat:${(specialDefense/255)*100}%"></div>
                         </div>
-                        <span "statNumber">${specialDefense}</span}
+                        <span class="statNumber">${specialDefense}</span}
                     </li>
                     <li class="stat">
                         <span class="statName">Speed</span>
                         <div class="backgroundBar">
                             <div class="bar ${primaryType}" style="--stat:${(speed/255)*100}%"></div>
                         </div>
-                        <span "statNumber">${speed}</span}
+                        <span class="statNumber">${speed}</span}
                     </li>
                 </ol>
             </div>
